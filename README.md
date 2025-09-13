@@ -16,7 +16,7 @@ A professional cash register application that calculates change for customer pur
 
 ## ✨ Live Demo
 
-🌐 **[View Live Demo](https://your-live-demo-link.com)** *(Update after deployment)*
+🌐 **[View Cash Register App](https://cash-register-app-shibam.vercel.app)**
 
 ## 🚀 Key Features
 
