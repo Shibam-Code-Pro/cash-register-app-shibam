@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+main {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.register-display {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #e9ecef;
+}
+
+.price-display {
+    margin-bottom: 25px;
+}
+
+.price-display label {
+    display: block;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+#price-display {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #28a745;
+    background: #d4edda;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.cash-input-section {
+    margin-bottom: 25px;
+}
+
+.cash-input-section label {
+    display: block;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.currency-symbol {
+    position: absolute;
+    left: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #6c757d;
+    z-index: 1;
+}
+
+#cash {
+    width: 100%;
+    padding: 15px 15px 15px 35px;
+    font-size: 1.2rem;
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+#cash:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.purchase-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+}
+
+.purchase-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.3);
+}
+
+.purchase-btn:active {
+    transform: translateY(0);
+}
+
+.change-section label {
+    display: block;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.change-display {
+    background: #fff3cd;
+    border: 2px solid #ffeaa7;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #856404;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.change-display.success {
+    background: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.change-display.error {
+    background: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.drawer-info {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #e9ecef;
+}
+
+.drawer-info h3 {
+    color: #495057;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.drawer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.currency-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.currency-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.currency-name {
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.currency-amount {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #28a745;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .container {
+        margin: 10px;
+        border-radius: 15px;
+    }
+    
+    main {
+        padding: 30px;
+        gap: 30px;
+    }
+    
+    .register-display,
+    .drawer-info {
+        padding: 25px;
+    }
+}
+
+/* Mobile landscape and small tablet */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        margin: 0;
+        border-radius: 10px;
+    }
+    
+    main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    header {
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .register-display,
+    .drawer-info {
+        padding: 20px;
+    }
+    
+    .drawer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+    .currency-item {
+        padding: 12px;
+    }
+    
+    .currency-name {
+        font-size: 0.8rem;
+    }
+    
+    .currency-amount {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    
+    header {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    main {
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .register-display,
+    .drawer-info {
+        padding: 15px;
+    }
+    
+    #price-display {
+        font-size: 1.5rem;
+        padding: 8px 12px;
+    }
+    
+    #cash {
+        padding: 12px 12px 12px 30px;
+        font-size: 1.1rem;
+    }
+    
+    .currency-symbol {
+        font-size: 1.1rem;
+        left: 12px;
+    }
+    
+    .purchase-btn {
+        padding: 12px;
+        font-size: 1.1rem;
+    }
+    
+    .change-display {
+        padding: 12px;
+        font-size: 1rem;
+        min-height: 50px;
+    }
+    
+    .drawer-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .currency-item {
+        padding: 10px;
+    }
+    
+    .drawer-info h3 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    header p {
+        font-size: 0.9rem;
+    }
+    
+    main {
+        padding: 10px;
+    }
+    
+    .register-display,
+    .drawer-info {
+        padding: 12px;
+    }
+    
+    #price-display {
+        font-size: 1.3rem;
+    }
+    
+    .price-display label,
+    .cash-input-section label,
+    .change-section label {
+        font-size: 1rem;
+    }
+    
+    .currency-name {
+        font-size: 0.75rem;
+    }
+    
+    .currency-amount {
+        font-size: 0.9rem;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    .purchase-btn {
+        padding: 18px;
+        font-size: 1.2rem;
+        min-height: 50px;
+    }
+    
+    #cash {
+        padding: 18px 18px 18px 40px;
+        font-size: 1.2rem;
+        min-height: 50px;
+    }
+    
+    .currency-symbol {
+        left: 18px;
+    }
+    
+    .currency-item {
+        padding: 15px;
+        min-height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
